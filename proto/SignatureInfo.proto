@@ -1,0 +1,23 @@
+import "SignatureVerificationResult.proto";
+import "Timestamp.proto";
+
+package Diadoc.Api.Proto;
+
+message SignatureInfo
+{
+	required Timestamp SignedTime = 1; //время фомирования подписи 
+	optional Timestamp SignaturecVerificationTime = 2; //дата проверки подписи 
+	optional SignatureVerificationResult SignatureVerificationResult = 3; //результат проверки подписи
+	required string Thumbprint = 4;   //Отпечаток сертификата 
+	required string SerialNumber = 5; //Серийный номер 
+	optional string Issuer = 6;       //Кем выдан 
+	optional string IssueDate = 7;    //Дата выдачи 
+	optional string EndDate = 8;      //Срок действия 
+	optional string OrgName = 9;      //Организация-наименование 
+	optional string OrgInn= 10;       //Организация-ИНН 
+	optional string JobTitle = 11;    //Должность 
+	optional string FirstName = 12;   //Имя-отчество 
+	optional string Surname = 13;     //Фамилия 
+	optional string SNILS = 14;       //СНИЛС 
+	optional string Email = 15;       //EMAIL 
+}
